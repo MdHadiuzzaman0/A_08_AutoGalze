@@ -1,16 +1,10 @@
 "use client";
-import { useRouter } from 'next/navigation'
 
-const Search = ({allTiles}) => {
-    const router = useRouter();
+const Search = ({handleSearch}) => {
     const handle = (e) =>{
         e.preventDefault();
         const typedText = e.target.tile.value.toLowerCase().trim();
-        const searchingTile = allTiles.filter( tile => tile.title.toLowerCase().includes(typedText) )
-        // console.log(searchingTile.length, allTiles)
-        if(searchingTile.length > 0){
-            router.push('/tileSearch')
-        }
+        handleSearch(typedText)
     }
 
     return (
