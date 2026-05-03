@@ -59,7 +59,7 @@ const Register = () => {
                     <input
                         type="url"
                         className="input w-full"
-                        placeholder="Image link (e.g., https://...)"
+                        placeholder="e.g. https:// .......... .png|jpg|jpeg|gif|webp|svg"
                         {...register("image", {
                             required: "Photo URL is required",
                             pattern: {
@@ -106,8 +106,8 @@ const Register = () => {
                                 }
                             },
                             minLength: {
-                                value: 4,
-                                message: "Password must contain at least four characters",
+                                value: 8,
+                                message: "Password must contain at least eight characters",
                             },
                         })} />
                     {errors.password && <p role="alert" className="text-red-400">{errors.password.message}</p>}

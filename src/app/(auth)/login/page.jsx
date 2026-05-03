@@ -70,8 +70,8 @@ const Login = () => {
                                 }
                             },
                             minLength: {
-                                value: 4,
-                                message: "Password must contain at least four characters",
+                                value: 8,
+                                message: "Password must contain at least eight characters",
                             },
                         })} />
                     {/* {checkPasswordValue.length == 0 ? "" : errors.password ? <p role="alert" className="text-red-400">{errors.password.message}</p> : <p className="text-green-400">Password is ok</p>} */}

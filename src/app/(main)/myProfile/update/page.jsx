@@ -41,7 +41,7 @@ export default function UpdateProfile() {
                     </div>
                     <div className="form-control">
                         <label className="label font-bold">Photo URL</label>
-                        <input name="image" type="text" placeholder="Enter new image URL" 
+                        <input name="image" type="text" placeholder="Enter new image URL e.g. https:// .......... .png|jpg|jpeg|gif|webp|svg" 
                         {...register("image", { required: true })}
                         className="input input-bordered w-full" />
                     </div>
