@@ -1,18 +1,23 @@
-"use client";
+// "use client";
+// import { authClient } from "@/lib/auth-client"
 import Link from 'next/link';
 import Navlink from './Navlink';
+import LogoutButtonInNavbar from './LogoutButtonInNavbar';
 import Image from 'next/image';
-import { authClient } from "@/lib/auth-client"
-import { IoLogOutSharp } from "react-icons/io5";
+import { auth } from '@/lib/auth';
+import { headers } from "next/headers"
 
-const Navbar = () => {
-    const { data: session, isPending } = authClient.useSession()
+const Navbar = async () => {
+    // const { data: session, isPending } = authClient.useSession()
+    const session = await auth.api.getSession({
+        headers: await headers()
+    })
     const user = session?.user;
     // console.log(session, user)
 
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm py-6">
+            <div className="navbar bg-base-100 shadow-sm py-1">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,9 +34,10 @@ const Navbar = () => {
                     </div>
                     <Link href="/">
                         <div className='flex gap-1'>
-                            <Image src="/logo5.png"
+                            <Image src="/logo_40x28.png"
                                 width={500} height={500} alt="AutoGlaze Logo" className="w-10 h-7 rounded-lg" />
-                            <h3 className='text-xl font-bold text-gray-500'>AutoGlaze</h3>
+                            <div className="hidden md:block text-xl font-serif font-light text-gray-600 tracking-widest mb-2">Glaze<span className="text-[#d4a94a] italic">Haus</span>
+                            </div>
                         </div>
                     </Link>
                 </div>
@@ -43,9 +49,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {isPending ? <span className="loading loading-dots loading-md"></span> : user ?
+                    {user ?
                         <>
-                            <div className="flex items-center gap-1">
+                            <div className="flex items-center gap-2">
                                 <Link href='/myProfile'>
                                     <div className='flex gap-1'>
                                         <h3>{user?.name}</h3>
@@ -56,7 +62,8 @@ const Navbar = () => {
                                     </div>
                                 </Link>
 
-                                <Link href="/login" className="" onClick={async () => await authClient.signOut()}><IoLogOutSharp /></Link>
+                                {/* <Link href="/login" className="" onClick={async () => await authClient.signOut()}><IoLogOutSharp /></Link> */}
+                                <LogoutButtonInNavbar />
                             </div>
                         </>
                         : <Link href="/login" className="btn">Login</Link>}

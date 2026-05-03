@@ -55,6 +55,7 @@ const AllInfoAboutSingleTile = async ({ params }) => {
                                 {tile.inStock ? "● In Stock" : "● Out of Stock"}
                             </span>
                         </div>
+                        
                         {/* <div>
               <span className="text-xs uppercase text-gray-400 font-bold block">Finish</span>
               <span className="text-gray-800 font-medium">Glazed / Matte</span>
