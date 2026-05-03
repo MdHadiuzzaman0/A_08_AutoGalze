@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form"
 import { useRouter } from 'next/navigation'
 
-export const metadata = {
-  title: "Update Section",
-}
+// export const metadata = {
+//   title: "Update Section",
+// }
 
 export default function UpdateProfile() {
     const { register, handleSubmit } = useForm();
