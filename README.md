@@ -1,9 +1,10 @@
+
 <!-- Cover Image — export cover-preview.html as 1280×640 PNG and upload to GitHub, then replace the src below -->
 <div align="center">
 
 </div>
-  <img width="1326" height="626" alt="Animation-ezgif com-cut" src="https://github.com/user-attachments/assets/a70a2106-9007-4226-933e-bbf5a2c983e5" />
-
+  <!-- <img width="1326" height="626" alt="Animation-ezgif com-cut" src="https://github.com/user-attachments/assets/a70a2106-9007-4226-933e-bbf5a2c983e5" /> -->
+<img width="1325" height="626" alt="Animation2-ezgif com-cut" src="https://github.com/user-attachments/assets/8bcd5262-fe07-4d6f-acef-77df7141284f" />
 
 <div align="center">
 
