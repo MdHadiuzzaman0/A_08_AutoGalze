@@ -32,7 +32,7 @@ This project focuses on **Next.js server components, BetterAuth authentication, 
 
 ## 🔗 Live Site
 
-👉 **https://a-08-galze-haus.vercel.app/**
+👉 **https://a-08-galze-grid.vercel.app/**
 
 <hr/>
 
